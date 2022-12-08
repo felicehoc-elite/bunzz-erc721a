@@ -12,6 +12,8 @@ import "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 import "../interface/IERC721A.sol";
 
 /**
+ * @title ERC721A
+ * 
  * @dev Implementation of [ERC721](https://eips.ethereum.org/EIPS/eip-721) Non-Fungible Token Standard, including
  * the Metadata extension. Built to optimize for lower gas during batch mints.
  *

@@ -6,6 +6,8 @@ import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol";
 
 /**
+* @title IERC721A
+ * 
  * @dev Interface of an ERC721A compliant contract.
  */
 interface IERC721A is IERC721, IERC721Metadata {
