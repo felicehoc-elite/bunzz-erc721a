@@ -1,12 +1,12 @@
-# ERC721A
-
-*kazunetakeda25 (Used Azuki&#39;s v3.3)*
-
-> ERC721A 
+# ERC721AMock
 
 
 
-*Implementation of [ERC721](https://eips.ethereum.org/EIPS/eip-721) Non-Fungible Token Standard, including the Metadata extension. Built to optimize for lower gas during batch mints. Assumes serials are sequentially minted starting at _startTokenId() (defaults to 0, e.g. 0, 1, 2, 3..). Assumes that an owner cannot have more than 2^64 - 1 (max value of uint64) of supply. Assumes that the maximum token id cannot exceed 2^256 - 1 (max value of uint256).*
+
+
+
+
+
 
 ## Methods
 
@@ -49,6 +49,62 @@ function balanceOf(address owner) external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
+### baseURI
+
+```solidity
+function baseURI() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### burn
+
+```solidity
+function burn(uint256 tokenId, bool approvalCheck) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | undefined |
+| approvalCheck | bool | undefined |
+
+### exists
+
+```solidity
+function exists(uint256 tokenId) external view returns (bool)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
 ### getApproved
 
 ```solidity
@@ -70,6 +126,28 @@ function getApproved(uint256 tokenId) external view returns (address)
 | Name | Type | Description |
 |---|---|---|
 | _0 | address | undefined |
+
+### getAux
+
+```solidity
+function getAux(address owner) external view returns (uint64)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| owner | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint64 | undefined |
 
 ### isApprovedForAll
 
@@ -94,6 +172,23 @@ function isApprovedForAll(address owner, address operator) external view returns
 |---|---|---|
 | _0 | bool | undefined |
 
+### mint
+
+```solidity
+function mint(address to, uint256 quantity) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| to | address | undefined |
+| quantity | uint256 | undefined |
+
 ### name
 
 ```solidity
@@ -110,6 +205,28 @@ function name() external view returns (string)
 | Name | Type | Description |
 |---|---|---|
 | _0 | string | undefined |
+
+### numberMinted
+
+```solidity
+function numberMinted(address owner) external view returns (uint256)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| owner | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
 
 ### ownerOf
 
@@ -132,6 +249,41 @@ function ownerOf(uint256 tokenId) external view returns (address)
 | Name | Type | Description |
 |---|---|---|
 | _0 | address | undefined |
+
+### safeMint
+
+```solidity
+function safeMint(address to, uint256 quantity, bytes _data) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| to | address | undefined |
+| quantity | uint256 | undefined |
+| _data | bytes | undefined |
+
+### safeMint
+
+```solidity
+function safeMint(address to, uint256 quantity) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| to | address | undefined |
+| quantity | uint256 | undefined |
 
 ### safeTransferFrom
 
@@ -186,6 +338,23 @@ function setApprovalForAll(address operator, bool approved) external nonpayable
 |---|---|---|
 | operator | address | undefined |
 | approved | bool | undefined |
+
+### setAux
+
+```solidity
+function setAux(address owner, uint64 aux) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| owner | address | undefined |
+| aux | uint64 | undefined |
 
 ### supportsInterface
 
@@ -247,6 +416,23 @@ function tokenURI(uint256 tokenId) external view returns (string)
 | Name | Type | Description |
 |---|---|---|
 | _0 | string | undefined |
+
+### totalMinted
+
+```solidity
+function totalMinted() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
 
 ### totalSupply
 
